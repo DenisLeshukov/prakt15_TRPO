@@ -37,7 +37,7 @@ namespace prakt15_Leshukov_TRPO.Pages
 
         private void SignUser (object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate
+            NavigationService.Navigate(new MainPage());
         }
     }
 }

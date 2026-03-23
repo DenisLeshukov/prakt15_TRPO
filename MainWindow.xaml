@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prakt15_Leshukov_TRPO"
         mc:Ignorable="d"
-        WindowState="Maximized"
+       
         Background="#dfeaeb"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Frame x:Name="MainFrame"></Frame>
+        <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame"></Frame>
     </Grid>
 </Window>

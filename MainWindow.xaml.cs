@@ -19,6 +19,7 @@ namespace prakt15_Leshukov_TRPO
     {
         public MainWindow ()
         {
+            
             InitializeComponent( );
             MainFrame.Navigate( new SignInPage());
         }

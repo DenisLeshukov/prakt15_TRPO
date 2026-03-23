@@ -1,30 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\st310-05\\Desktop\\prakt15_Leshukov_TRPO\\",
+  "WorkspaceRootPath": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\st310-05\\desktop\\prakt15_leshukov_trpo\\pages\\signinpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|solutionrelative:pages\\signinpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\leshu\\desktop\\prakt15\\prakt15_trpo\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|solutionrelative:pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\st310-05\\desktop\\prakt15_leshukov_trpo\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|solutionrelative:pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\leshu\\desktop\\prakt15\\prakt15_trpo\\pages\\mainpage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|solutionrelative:pages\\mainpage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\st310-05\\desktop\\prakt15_leshukov_trpo\\pages\\signinpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|solutionrelative:pages\\signinpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\leshu\\desktop\\prakt15\\prakt15_trpo\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|solutionrelative:services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\st310-05\\desktop\\prakt15_leshukov_trpo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\leshu\\desktop\\prakt15\\prakt15_trpo\\services\\dbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|solutionrelative:services\\dbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\leshu\\desktop\\prakt15\\prakt15_trpo\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\leshu\\desktop\\prakt15\\prakt15_trpo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\st310-05\\desktop\\prakt15_leshukov_trpo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\leshu\\desktop\\prakt15\\prakt15_trpo\\pages\\signinpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|solutionrelative:pages\\signinpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\leshu\\desktop\\prakt15\\prakt15_trpo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\st310-05\\desktop\\prakt15_leshukov_trpo\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|c:\\users\\leshu\\desktop\\prakt15\\prakt15_trpo\\pages\\signinpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FE017C25-BD7B-48F3-99A4-D332C31AC5BF}|prakt15_Leshukov_TRPO.csproj|solutionrelative:pages\\signinpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,40 +46,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\st310-05\\Desktop\\prakt15_Leshukov_TRPO\\Pages\\MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\Pages\\MainPage.xaml",
               "RelativeDocumentMoniker": "Pages\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\st310-05\\Desktop\\prakt15_Leshukov_TRPO\\Pages\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\Pages\\MainPage.xaml",
               "RelativeToolTip": "Pages\\MainPage.xaml",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAewC4AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-21T10:16:09.051Z",
+              "WhenOpened": "2026-03-23T16:03:03.024Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\Pages\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\Pages\\MainPage.xaml.cs*",
+              "RelativeToolTip": "Pages\\MainPage.xaml.cs*",
+              "ViewState": "AgIAAIgAAAAAAAAAAADwv58AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T16:01:35.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\Services\\ProductService.cs",
+              "RelativeToolTip": "Services\\ProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T15:53:26.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DbService.cs",
+              "DocumentMoniker": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\Services\\DbService.cs",
+              "RelativeDocumentMoniker": "Services\\DbService.cs",
+              "ToolTip": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\Services\\DbService.cs",
+              "RelativeToolTip": "Services\\DbService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T15:49:35.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "SignInPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\st310-05\\Desktop\\prakt15_Leshukov_TRPO\\Pages\\SignInPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\Pages\\SignInPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\SignInPage.xaml.cs",
-              "ToolTip": "C:\\Users\\st310-05\\Desktop\\prakt15_Leshukov_TRPO\\Pages\\SignInPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\Pages\\SignInPage.xaml.cs",
               "RelativeToolTip": "Pages\\SignInPage.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAJAAAA",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAkwCcAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-21T10:13:28.352Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\st310-05\\Desktop\\prakt15_Leshukov_TRPO\\App.xaml",
+              "DocumentMoniker": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\st310-05\\Desktop\\prakt15_Leshukov_TRPO\\App.xaml",
+              "ToolTip": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-03-21T10:06:57.667Z",
@@ -75,11 +131,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "SignInPage.xaml",
-              "DocumentMoniker": "C:\\Users\\st310-05\\Desktop\\prakt15_Leshukov_TRPO\\Pages\\SignInPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\Pages\\SignInPage.xaml",
               "RelativeDocumentMoniker": "Pages\\SignInPage.xaml",
-              "ToolTip": "C:\\Users\\st310-05\\Desktop\\prakt15_Leshukov_TRPO\\Pages\\SignInPage.xaml",
+              "ToolTip": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\Pages\\SignInPage.xaml",
               "RelativeToolTip": "Pages\\SignInPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-03-21T09:53:06.382Z",
@@ -87,11 +143,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\st310-05\\Desktop\\prakt15_Leshukov_TRPO\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\st310-05\\Desktop\\prakt15_Leshukov_TRPO\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-03-21T09:17:46.332Z",
@@ -99,13 +155,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\st310-05\\Desktop\\prakt15_Leshukov_TRPO\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\st310-05\\Desktop\\prakt15_Leshukov_TRPO\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Leshu\\Desktop\\prakt15\\prakt15_TRPO\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAiAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-21T09:17:44.871Z",
               "EditorCaption": ""

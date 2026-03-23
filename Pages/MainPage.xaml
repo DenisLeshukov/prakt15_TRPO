@@ -5,10 +5,114 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:prakt15_Leshukov_TRPO.Pages"
       mc:Ignorable="d" 
+      xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainPage">
 
-    <Grid>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2">
+            <Label>Поиск</Label>
+            <TextBox TextChanged="TextBox_TextChanged" Text="{Binding searchQuery, UpdateSourceTrigger=PropertyChanged}" md:HintAssist.Hint="Введите текст для поиска"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
+            <Label FontSize="16">Сортировка</Label>
+            <ComboBox SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBox.Items>
+                    <ComboBoxItem Tag="Name">По наименования</ComboBoxItem>
+                    <ComboBoxItem Tag="PriceAscend">По цене(по возрастанию)</ComboBoxItem>
+                    <ComboBoxItem Tag="PriceDescend">По цене(по убыванию)</ComboBoxItem>
+                    <ComboBoxItem Tag="CountAscend">По количеству(по возрастанию)</ComboBoxItem>
+                    <ComboBoxItem Tag="CountDescend">По количеству(по убыванию)</ComboBoxItem>
+                </ComboBox.Items>
+            </ComboBox>
+            <Label>Фильтры</Label>
+            <ComboBox SelectedItem="{Binding selectedCb}" SelectionChanged="ComboBox_SelectionChanged_1">
+                <ComboBox.Items>
+                    <ComboBoxItem Tag="Category">По категории</ComboBoxItem>
+                    <ComboBoxItem Tag="Brand">По бренду</ComboBoxItem>
+                    <ComboBoxItem Tag="Price">По цене</ComboBoxItem>
+                </ComboBox.Items>
+            </ComboBox>
+            <StackPanel>
+                <Label FontSize="16">Фильтр по росту</Label>
+                <Label>от</Label>
+                <TextBox  TextChanged="TextBox_TextChanged_1" Text="{Binding filterPriceFrom, UpdateSourceTrigger=PropertyChanged}"/>
+                <Label>до</Label>
+                <TextBox TextChanged="TextBox_TextChanged_1" Text="{Binding filterPriceTo, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <Button Click="Reset" Margin="5">Сбросить</Button>
+        </StackPanel>
+
+        <ListView  Grid.RowSpan="2" Grid.Row="1" HorizontalContentAlignment="Stretch" Grid.Column="1" ItemsSource="{Binding products}">
+           
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            
+                        </Grid.RowDefinitions>
+                        <TextBlock HorizontalAlignment="Left" Grid.Row="0">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}{0} {1}">
+                                   
+                                    <Binding Path="Brand.Name" />
+                                    <Binding Path="Name" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Right" Grid.Row="0" Text="{Binding Price}"></TextBlock>
+                        <TextBlock Grid.Row="1">
+                            <Run Text="рейтинг"/>
+                            <Run Text="{Binding Raiting}"/>
+                        </TextBlock>
+                        <TextBlock Grid.Row="2">
+                            <Run Text="Категория"/>
+                            <Run Text="{Binding Category.Name}"/>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Left" Grid.Row="3">
+                            <Run Text="Описание"/>
+                            <Run Text="{Binding Description}"/>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Right" Grid.Row="3">
+                            <Run Text="Остаток"/>
+                            <Run Text="{Binding Stock}"/>
+                        </TextBlock>
+                        
+                        <ItemsControl Grid.Row="4" ItemsSource="{Binding Tags}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name, StringFormat=#{0}}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                       
+                        
+                    </Grid>
+                    
+                    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         
     </Grid>
 </Page>
