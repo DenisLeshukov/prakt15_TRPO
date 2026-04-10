@@ -356,8 +356,12 @@ namespace prakt15_Leshukov_TRPO.Pages
             if(selectedItem != null)
             {
                 service.Remove(selectedItem);
+                products.Remove( selectedItem);
                 userView?.Refresh();
             }
+
+           
+            
         }
         // дизайн по заданию
     }

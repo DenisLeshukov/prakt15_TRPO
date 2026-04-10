@@ -46,7 +46,7 @@ public partial class Prakt15LeshukovTrpoContext : DbContext
             entity.ToTable("categories");
 
             entity.Property(e => e.Id)
-                .UseIdentityColumn( )
+                .ValueGeneratedOnAdd()
                 .HasColumnName("id");
             entity.Property(e => e.Name)
                 .HasMaxLength(50)
