@@ -101,8 +101,12 @@ namespace prakt15_Leshukov_TRPO.Pages
             }
             if (selectedTag != null)
             {
-                tags.Remove(selectedTag);
+               
                 service.Remove(selectedTag);
+
+                tags.Remove(selectedTag);
+                DataContext = null;
+                DataContext = this;
             }
         }
     }

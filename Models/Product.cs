@@ -9,10 +9,10 @@ namespace prakt15_Leshukov_TRPO.Models;
 
 public partial class Product:ObservableObject
 {
-    
-    private int _id;
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    private int _id;
+    
     public int Id { get => _id; set => SetProperty(ref _id, value); }
 
     private string _name = null!;
