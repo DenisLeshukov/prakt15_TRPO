@@ -7,6 +7,7 @@
       xmlns:convert="clr-namespace:prakt15_Leshukov_TRPO.Converters"
       mc:Ignorable="d" 
       xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:valid="clr-namespace:prakt15_Leshukov_TRPO.Validators"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainPage">
 
@@ -62,19 +63,33 @@
                  Text="{Binding categoryValue}"
                 TextChanged="CategoryTextBox_TextChanged"
                  />
-            <TextBox
+                <TextBox
                  Visibility="{Binding IsBrandVisible, Converter={StaticResource VisibleConverter }}"
                  Margin="0,5" 
                      md:HintAssist.Hint="Введите название бренда"
                  Text="{Binding brandValue}"
                 TextChanged="BrandTextBox_TextChanged"
-                 />
+                 >
+                    
+                </TextBox>
             <StackPanel Visibility="{Binding IsPriceVisible, Converter={StaticResource VisibleConverter}}">
                 
                 <Label>от</Label>
-                <TextBox  Text="{Binding filterPriceFrom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox >
+                        <Binding Path="filterPriceFrom" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <valid:EntryPrice/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox>
                 <Label>до</Label>
-                <TextBox  Text="{Binding filterPriceTo, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox >
+                        <Binding Path="filterPriceTo" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <valid:EntryPrice/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox>
             </StackPanel>
             <Button Click="Reset" Margin="5">Сбросить</Button>
                 <WrapPanel Grid.Row="2" Grid.ColumnSpan="2">
