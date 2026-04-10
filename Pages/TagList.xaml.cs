@@ -56,11 +56,26 @@ namespace prakt15_Leshukov_TRPO.Pages
             }
             if (selectedTag != null)
             {
-                service.Commit();
+                if (!string.IsNullOrEmpty(tag.Name))
+                {
+                    service.Commit( );
+                }
+                else
+                {
+                    MessageBox.Show("Заполните поля верно");
+                    return;
+                }
+                
             }
             else
             {
-                service.Add(tag);
+                if (!string.IsNullOrEmpty(tag.Name)) 
+                    service.Add(tag);
+                else
+                {
+                    MessageBox.Show("Заполните поля верно");
+                    return;
+                }
             }
             NavigationService.GoBack();
         }

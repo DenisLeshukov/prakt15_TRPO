@@ -25,7 +25,7 @@
         </ListView>
         <StackPanel x:Name="brand" Grid.Column="1" VerticalAlignment="Center">
             <TextBox >
-                <Binding Path="tag.Name">
+                <Binding Path="tag.Name" UpdateSourceTrigger="PropertyChanged">
                     <Binding.ValidationRules>
                         <valid:EntryValidation/>
                     </Binding.ValidationRules>

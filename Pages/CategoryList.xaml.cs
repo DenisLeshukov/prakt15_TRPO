@@ -69,14 +69,32 @@ namespace prakt15_Leshukov_TRPO.Pages
                 MessageBox.Show("Заполните поля верно");
                 return;
             }
+           
             if(selectedCategory != null)
             {
-                service.Commit();
+                if (!string.IsNullOrEmpty(category.Name))
+                {
+                    service.Commit( );
+                }
+                else
+                {
+                    MessageBox.Show("Заполните поля");
+                    return;
+                }
+               
                
             }
             else {
-                
-                service.Add(category);
+                if (!string.IsNullOrEmpty(category.Name))
+                {
+                    service.Add(category);
+                }
+                else
+                {
+                    MessageBox.Show( "Заполните поля");
+                    return;
+                }
+                   
                
 
             }
