@@ -36,8 +36,9 @@
         <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
         <StackPanel  Grid.RowSpan="2">
             <Label FontSize="16">Сортировка</Label>
-            <ComboBox SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBox x:Name="comboBoxI" SelectionChanged="ComboBox_SelectionChanged">
                 <ComboBox.Items>
+                    <ComboBoxItem Tag="empty"></ComboBoxItem>
                     <ComboBoxItem Tag="Name">По наименования</ComboBoxItem>
                     <ComboBoxItem Tag="PriceAscend">По цене(по возрастанию)</ComboBoxItem>
                     <ComboBoxItem Tag="PriceDescend">По цене(по убыванию)</ComboBoxItem>
@@ -71,9 +72,9 @@
             <StackPanel Visibility="{Binding IsPriceVisible, Converter={StaticResource VisibleConverter}}">
                 
                 <Label>от</Label>
-                <TextBox  TextChanged="PriceFromTextBox_TextChanged" Text="{Binding filterPriceFrom, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox  Text="{Binding filterPriceFrom, UpdateSourceTrigger=PropertyChanged}"/>
                 <Label>до</Label>
-                <TextBox TextChanged="PriceToTextBox_TextChanged" Text="{Binding filterPriceTo, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox  Text="{Binding filterPriceTo, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
             <Button Click="Reset" Margin="5">Сбросить</Button>
             

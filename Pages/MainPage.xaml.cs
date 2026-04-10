@@ -250,6 +250,14 @@ namespace prakt15_Leshukov_TRPO.Pages
             searchQuery = "";
             filterPriceFrom = "";
             filterPriceTo = "";
+            categoryValue = "";
+            brandValue = "";
+            filterPriceFrom = "";
+            filterPriceTo = "";
+            DataContext = null;
+            DataContext = this;
+            comboBoxI.SelectedIndex = 0;
+            userView.SortDescriptions.Clear( );
             selectedCb = null;
         }
 
@@ -321,10 +329,10 @@ namespace prakt15_Leshukov_TRPO.Pages
 
         private void PriceToTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var textBox = sender as TextBox;
-            if (textBox != null)
+            var textBox1 = sender as TextBox;
+            if (textBox1 != null)
             {
-                filterPriceFrom = textBox.Text;
+                filterPriceFrom = textBox1.Text;
                 userView?.Refresh();
             }
         }
