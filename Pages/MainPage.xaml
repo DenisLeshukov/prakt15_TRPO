@@ -77,6 +77,11 @@
                 <TextBox  Text="{Binding filterPriceTo, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
             <Button Click="Reset" Margin="5">Сбросить</Button>
+                <WrapPanel Grid.Row="2" Grid.ColumnSpan="2">
+                    <TextBlock Text="{Binding service.Products.Count, StringFormat='{}Всего: {0}'}"/>
+                    <TextBlock Text="{Binding Items.Count, ElementName=ProductsList, StringFormat='{} Показано: {0}'}"/>
+                </WrapPanel>
+                
             
             <Button Visibility="{Binding ButtonVisibility}" Click="goProduct" Margin="5">Создать продукт</Button>
                 <Button Visibility="{Binding ButtonVisibility}" Click="goCategory" Margin="5">К категориям</Button>
@@ -86,7 +91,7 @@
             <Button Visibility="{Binding ButtonVisibility}" Click="Delete" Margin="5">Удалить</Button>
         </StackPanel>
         </ScrollViewer>
-        <ListView MouseDoubleClick="ListView_MouseDoubleClick" SelectedItem="{Binding selectedItem}" Grid.RowSpan="2" Grid.Row="1" HorizontalContentAlignment="Stretch" Grid.Column="1" ItemsSource="{Binding products}">
+        <ListView x:Name="ProductsList" MouseDoubleClick="ListView_MouseDoubleClick" SelectedItem="{Binding selectedItem}" Grid.RowSpan="2" Grid.Row="1" HorizontalContentAlignment="Stretch" Grid.Column="1" ItemsSource="{Binding products}">
 
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignListBoxItem}">
