@@ -78,17 +78,17 @@ namespace prakt15_Leshukov_TRPO.Pages
                 MessageBox.Show("Заполните поля верно");
                 return;
             }
-    //        if (string.IsNullOrWhiteSpace(product.Name) ||
-    //string.IsNullOrWhiteSpace(product.Description) ||
-    //product.Price <= 0 ||  
-    //product.Raiting < 0 || product.Raiting > 5 || 
-    //product.Brand == null ||
-    //product.Category == null ||
-    //product.Stock < 0)
-    //        {
-    //            MessageBox.Show("Заполните поля верно");
-    //            return;
-    //        }
+            if (string.IsNullOrWhiteSpace(product.Name) ||
+                string.IsNullOrWhiteSpace(product.Description) ||
+                product.Price <= 0 ||  
+                product.Raiting < 0 || product.Raiting > 5 || 
+                product.Brand == null ||
+                product.Category == null ||
+                product.Stock < 0)
+            {
+                MessageBox.Show("Заполните поля верно");
+                return;
+            }
             if (selectedCategory != null)
                 product.CategoryId = selectedCategory.Id;
 

@@ -111,7 +111,8 @@ namespace prakt15_Leshukov_TRPO.Pages
             {
                 service.Remove(selectedCategory);
                 categories.Remove(selectedCategory);
-                
+                DataContext = null;
+                DataContext = this;
             }
         }
     }
