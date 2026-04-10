@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\App.xaml
-3753998445
+8363050181
 22339771869
-1386977318
+26-1143589282
 2311123118123
-MainWindow.xaml;Pages\MainPage.xaml;Pages\SignInPage.xaml;
+MainWindow.xaml;Pages\AddChangeProducts.xaml;Pages\AddTegToProduct.xaml;Pages\BrandList.xaml;Pages\CategoryList.xaml;Pages\MainPage.xaml;Pages\SignInPage.xaml;Pages\TagList.xaml;
 
 False
 

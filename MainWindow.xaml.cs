@@ -23,5 +23,29 @@ namespace prakt15_Leshukov_TRPO
             InitializeComponent( );
             MainFrame.Navigate( new SignInPage());
         }
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            var page = e.Content as Page;
+
+            if (page != null)
+            {
+                
+                if (page is MainPage)
+                    this.Title = "Главная страница";
+                else if (page is CategoryList)
+                    this.Title = "Категории";
+                else if (page is BrandList)
+                    this.Title = "Бренды";
+                else if (page is TagList)
+                    this.Title = "Теги";
+                else if (page is AddChangeProducts)
+                    this.Title = "Редактирование/Добавление продукта";
+                else if (page is AddTegToProduct)
+                    this.Title = "Добавление тегов к продукту";
+                else
+                    this.Title = "Вход";
+            }
+        }
     }
 }

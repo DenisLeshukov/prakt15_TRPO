@@ -9,6 +9,6 @@
         Background="#dfeaeb"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame"></Frame>
+        <Frame NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated" x:Name="MainFrame"></Frame>
     </Grid>
 </Window>

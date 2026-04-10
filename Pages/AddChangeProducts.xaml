@@ -1,0 +1,89 @@
+﻿<Page x:Class="prakt15_Leshukov_TRPO.Pages.AddChangeProducts"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:prakt15_Leshukov_TRPO.Pages"
+      xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:valid="clr-namespace:prakt15_Leshukov_TRPO.Validators"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddChangeProducts">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" >
+            <TextBox x:Name="name" md:HintAssist.Hint="Название:" >
+                <Binding Path="product.Name" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <valid:EntryValidation/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox>
+            <TextBox x:Name="desc" md:HintAssist.Hint="Описание:">
+                <Binding Path="product.Description" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <valid:EntryValidation/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox>
+            <TextBox x:Name="price" md:HintAssist.Hint="Цена:">
+                <Binding Path="product.Price" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <valid:EntryValidation/>
+                        <valid:EntryPrice/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox>
+            <TextBox x:Name="count" md:HintAssist.Hint="Количество:">
+                <Binding Path="product.Stock" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <valid:EntryValidation/>
+                        <valid:EntryInt/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox>
+            <TextBox x:Name="rate" md:HintAssist.Hint="Рейтинг:">
+                <Binding Path="product.Raiting" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <valid:EntryValidation/>
+                        <valid:EntryRaiting/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox>
+            <DatePicker x:Name="date" md:HintAssist.Hint="Создано:" >
+                <DatePicker.Text>
+                    <Binding Path="product.CreatedAt" UpdateSourceTrigger="PropertyChanged"  StringFormat="dd.MM.yyyy">
+                        <Binding.ValidationRules>
+                            <valid:EntryValidation/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </DatePicker.Text>
+            </DatePicker>
+            <ComboBox x:Name="category" md:HintAssist.Hint="Категория:"  DisplayMemberPath="Name" ItemsSource="{Binding categories}">
+                <ComboBox.SelectedItem>
+                    <Binding Path="selectedCategory" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <valid:EntryValidation/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </ComboBox.SelectedItem>
+            </ComboBox>
+            <ComboBox x:Name="brand" md:HintAssist.Hint="Бренд:" DisplayMemberPath="Name" ItemsSource="{Binding brands}">
+                <ComboBox.SelectedItem>
+                    <Binding Path="selectedBrand" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <valid:EntryValidation/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </ComboBox.SelectedItem>
+            </ComboBox>
+            <Button Click="Save" >Сохранить</Button>
+            <Button Click="Back" >Назад</Button>
+        </StackPanel>
+    </Grid>
+</Page>

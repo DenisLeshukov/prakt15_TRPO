@@ -19,7 +19,7 @@ namespace prakt15_Leshukov_TRPO.Services
         {
             var _product = new Product
             {
-                Id = product.Id,
+               
                 Name = product.Name,
                 Description = product.Description,
                 Price = product.Price,

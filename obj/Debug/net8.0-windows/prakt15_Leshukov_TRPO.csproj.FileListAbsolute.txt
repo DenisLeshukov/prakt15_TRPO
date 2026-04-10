@@ -309,3 +309,14 @@ C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\prakt15_Les
 C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\prakt15_.831B6A40.Up2Date
 C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\prakt15_Leshukov_TRPO.genruntimeconfig.cache
 C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\ref\prakt15_Leshukov_TRPO.dll
+C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\Pages\AddChangeProducts.g.cs
+C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\Pages\AddChangeProducts.baml
+C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\Pages\BrandList.g.cs
+C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\Pages\CategoryList.g.cs
+C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\Pages\BrandList.baml
+C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\Pages\CategoryList.baml
+C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\Pages\TagList.g.cs
+C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\Pages\TagList.baml
+C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\Pages\AddTegToProduct.g.cs
+C:\Users\Leshu\Desktop\prakt15\prakt15_TRPO\obj\Debug\net8.0-windows\Pages\AddTegToProduct.baml

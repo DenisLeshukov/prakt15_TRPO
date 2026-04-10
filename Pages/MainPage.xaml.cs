@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -24,19 +25,116 @@ namespace prakt15_Leshukov_TRPO.Pages
     /// <summary>
     /// Логика взаимодействия для MainPage.xaml
     /// </summary>
-    public partial class MainPage :Page
+    public partial class MainPage :Page, INotifyPropertyChanged
     {
+        private string _selectedSearchType;
+        private bool _isCategoryVisible;
+        private bool _isBrandVisible;
+        private bool _isPriceVisible;
+        private string _filterPriceFrom;
+        private string _filterPriceTo;
+        public string filterPriceFrom
+        {
+            get => _filterPriceFrom;
+            set
+            {
+                _filterPriceFrom = value;
+                OnPropertyChanged();
+                userView?.Refresh();
+            }
+        }
+
        
+        public string filterPriceTo
+        {
+            get => _filterPriceTo;
+            set
+            {
+                _filterPriceTo = value;
+                OnPropertyChanged();
+                userView?.Refresh();
+            }
+        }
+        public string categoryValue { get; set; } = null;
+        public string brandValue { get; set; } = null;
+        public string SelectedSearchType
+        {
+            get => _selectedSearchType;
+            set
+            {
+                _selectedSearchType = value;
+                OnPropertyChanged();
+                UpdateVisibility();
+                categoryValue = "";
+                brandValue = "";
+                filterPriceFrom = "";
+                filterPriceTo = "";
+
+                userView?.Refresh();
+            }
+        }
+
+        public bool IsCategoryVisible
+        {
+            get => _isCategoryVisible;
+            set { _isCategoryVisible = value; OnPropertyChanged(); }
+        }
+
+        public bool IsBrandVisible
+        {
+            get => _isBrandVisible;
+            set { _isBrandVisible = value; OnPropertyChanged(); }
+        }
+
+        public bool IsPriceVisible
+        {
+            get => _isPriceVisible;
+            set { _isPriceVisible = value; OnPropertyChanged(); }
+        }
+       
+        private bool isManger;
+        public bool IsManger
+        {
+            get => isManger;
+            set
+            {
+                isManger = value;
+            }
+        }
+        public Visibility ButtonVisibility => isManger ? Visibility.Visible : Visibility.Collapsed;
         public ObservableCollection<Product> products { get; set; } = new();
         public ProductService service { get; set; } = new();
         public ICollectionView userView { get; set; }
         public string searchQuery { get; set; } = null!;
-        public string filterPriceFrom { get; set; } = null!;
-        public string filterPriceTo { get; set; } = null!;
+       
+        public Product selectedItem { get; set; }
 
-        public ComboBoxItem selectedCb { get; set; } = new ComboBoxItem(); 
+        public ComboBoxItem selectedCb { get; set; } = new ComboBoxItem();
 
-        public MainPage ()
+        private void UpdateVisibility()
+        {
+            IsCategoryVisible = false;
+            IsBrandVisible = false;
+            IsPriceVisible = false;
+
+            if (SelectedSearchType == "Category")
+            {
+                IsCategoryVisible = true;
+                userView?.Refresh(); 
+            }
+            else if (SelectedSearchType == "Brand")
+            {
+                IsBrandVisible = true;
+                userView?.Refresh(); 
+            }
+            else if (SelectedSearchType == "Price")
+            {
+                IsPriceVisible = true;
+                userView?.Refresh(); 
+            }
+        }
+
+        public MainPage (bool _isManager)
         {
            
             InitializeComponent( );
@@ -44,43 +142,62 @@ namespace prakt15_Leshukov_TRPO.Pages
             {
                 products.Add(product);
             }
-            
+            if (_isManager == false)
+                isManger = false;
+            else 
+                isManger = true;
+
             userView = CollectionViewSource.GetDefaultView(products);
+            
             userView.Filter = FilterForms;
             DataContext = this;
         }
         public bool FilterForms(object obj)
         {
-            if (obj is not Product)
+            if (obj is not Product product)
                 return false;
-            var product = (Product)obj;
+
            
-           
-            if (!filterPriceFrom.IsNullOrEmpty() && Convert.ToInt32(filterPriceFrom) > product.Price)
-                return false;
-            
-            if (!filterPriceTo.IsNullOrEmpty() && Convert.ToInt32(filterPriceTo) < product.Price)
-                return false;
             if (!string.IsNullOrEmpty(searchQuery))
             {
-                bool matches = false;
+                if (!product.Name.Contains(searchQuery, StringComparison.CurrentCultureIgnoreCase))
+                    return false;
+            }
 
-                switch (selectedCb.Tag?.ToString())
+           
+            if (SelectedSearchType == "Category" && !string.IsNullOrEmpty(categoryValue))
+            {
+                if (!product.Category.Name.Contains(categoryValue, StringComparison.CurrentCultureIgnoreCase))
+                    return false;
+            }
+
+           
+            if (SelectedSearchType == "Brand" && !string.IsNullOrEmpty(brandValue))
+            {
+                if (!product.Brand.Name.Contains(brandValue, StringComparison.CurrentCultureIgnoreCase))
+                    return false;
+            }
+
+           
+            if (SelectedSearchType == "Price")
+            {
+                if (!string.IsNullOrEmpty(filterPriceFrom))
                 {
-                    case "Brand":
-                        matches = product.Brand.Name.Contains(searchQuery, StringComparison.CurrentCultureIgnoreCase);
-                        break;
-                    case "Category":
-                        matches = product.Category.Name.Contains(searchQuery, StringComparison.CurrentCultureIgnoreCase);
-                       
-                        break;
-                    default:
-                        matches = product.Name.Contains(searchQuery, StringComparison.CurrentCultureIgnoreCase);
-                        break;
+                    if (decimal.TryParse(filterPriceFrom, out decimal from))
+                    {
+                        if (product.Price < from)
+                            return false;
+                    }
                 }
 
-                if (!matches)
-                    return false;
+                if (!string.IsNullOrEmpty(filterPriceTo))
+                {
+                    if (decimal.TryParse(filterPriceTo, out decimal to))
+                    {
+                        if (product.Price > to)
+                            return false;
+                    }
+                }
             }
 
             return true;
@@ -90,31 +207,7 @@ namespace prakt15_Leshukov_TRPO.Pages
         {
             userView.Refresh();
         }
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-            var tb = sender as TextBox;
-            if(selectedCb.Tag != null)
-            {
-                if (selectedCb.Tag.ToString() == "Price")
-                {
-                    userView.Refresh();
-                }
-                else
-                {
-                    MessageBox.Show("Сначала выберите фильтр по цене!");
-                    tb.Clear();
-                    return;
-                }
-            }
-            else
-            {
-                
-                MessageBox.Show("Сначала выберите фильтр по цене!");
-                tb.Clear();
-                return;
-            }
-                
-        }
+        
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -159,6 +252,105 @@ namespace prakt15_Leshukov_TRPO.Pages
             filterPriceTo = "";
             selectedCb = null;
         }
-        // кнопка сбросить, менеджер и его CRUD, если товара меньше 10 - обводка цветом
+
+        private void ListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if(isManger == true)
+            {
+                if(selectedItem !=null)
+                    NavigationService.Navigate(new AddChangeProducts(selectedItem));
+                else
+                    NavigationService.Navigate(new AddChangeProducts(null));
+            }
+        }
+
+        private void goCategory(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new CategoryList());
+        }
+
+        private void goProduct(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddChangeProducts(null));
+        }
+
+        private void goBrand(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new BrandList());
+        }
+
+        private void goTag(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new TagList());
+        }
+
+        private void goTagToProdutc(object sender, RoutedEventArgs e)
+        {
+            if (selectedItem != null){
+                NavigationService.Navigate(new AddTegToProduct(selectedItem));
+            }
+            
+
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private void CategoryTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                categoryValue = textBox.Text;
+                userView?.Refresh();
+            }
+        }
+
+        private void BrandTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                brandValue = textBox.Text;
+                userView?.Refresh();
+            }
+        }
+
+        private void PriceToTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                filterPriceFrom = textBox.Text;
+                userView?.Refresh();
+            }
+        }
+
+        private void PriceFromTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                filterPriceTo = textBox.Text;
+                userView?.Refresh();
+            }
+        }
+
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+            if(MessageBox.Show("Вы действительное хотите удалить?", "Удаление", MessageBoxButton.YesNo) == MessageBoxResult.No)
+            {
+                return;
+            }
+            if(selectedItem != null)
+            {
+                service.Remove(selectedItem);
+                userView?.Refresh();
+            }
+        }
+        // дизайн по заданию
     }
 }

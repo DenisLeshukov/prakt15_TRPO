@@ -31,13 +31,13 @@ namespace prakt15_Leshukov_TRPO.Pages
         {
             if(password == 1234)
             {
-                NavigationService.Navigate( new MainPage());
+                NavigationService.Navigate( new MainPage(true));
             }
         }
 
         private void SignUser (object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new MainPage());
+            NavigationService.Navigate(new MainPage(false));
         }
     }
 }
