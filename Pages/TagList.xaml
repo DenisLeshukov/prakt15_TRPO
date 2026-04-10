@@ -34,6 +34,7 @@
             </TextBox>
             <Button Click="Save">Сохранить</Button>
             <Button Click="Reset">Сбросить</Button>
+            <Button Click="Delete">Удалить</Button>
             <Button Click="goBack">Назад</Button>
         </StackPanel>
     </Grid>

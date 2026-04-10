@@ -92,5 +92,18 @@ namespace prakt15_Leshukov_TRPO.Pages
         {
             NavigationService.GoBack();
         }
+
+        private void Delete (object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы действительное хотите удалить?", "Удаление", MessageBoxButton.YesNo) == MessageBoxResult.No)
+            {
+                return;
+            }
+            if (selectedTag != null)
+            {
+                tags.Remove(selectedTag);
+                service.Remove(selectedTag);
+            }
+        }
     }
 }

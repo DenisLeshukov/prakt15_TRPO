@@ -102,7 +102,8 @@ namespace prakt15_Leshukov_TRPO.Pages
             {
                 service.Remove(selectedBrand);
                 brands.Remove(selectedBrand);
-                
+                DataContext = null;
+                DataContext = this;
             }
         }
     }
