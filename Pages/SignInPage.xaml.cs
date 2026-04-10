@@ -33,6 +33,10 @@ namespace prakt15_Leshukov_TRPO.Pages
             {
                 NavigationService.Navigate( new MainPage(true));
             }
+            else
+            {
+                MessageBox.Show("Пароль неверный" );
+            }
         }
 
         private void SignUser (object sender, RoutedEventArgs e)
